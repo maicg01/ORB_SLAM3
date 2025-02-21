@@ -41,6 +41,7 @@ MESSAGE(${OpenCV_VERSION})
 find_package(Eigen3 3.1.0 REQUIRED)
 find_package(Pangolin REQUIRED)
 find_package(realsense2)
+find_package(depthai CONFIG REQUIRED)
 
 include_directories(
 ${PROJECT_SOURCE_DIR}
@@ -123,6 +124,7 @@ ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
 ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
 -lboost_serialization
 -lcrypto
+PRIVATE depthai::opencv
 )
 
 # If RealSense SDK is found the library is added and its examples compiled
