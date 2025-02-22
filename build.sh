@@ -24,6 +24,13 @@ cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j
 
+cd ../../depthai-core
+
+echo "Configuring and building Thirdparty/depthai-core ..."
+
+cmake -S. -Bbuild
+cmake --build build
+
 cd ../../../
 
 echo "Uncompress vocabulary ..."
