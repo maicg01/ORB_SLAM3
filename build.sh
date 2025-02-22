@@ -31,7 +31,7 @@ echo "Configuring and building Thirdparty/depthai-core ..."
 cmake -S. -Bbuild
 cmake --build build
 
-cd ../../../
+cd ../../
 
 echo "Uncompress vocabulary ..."
 
