@@ -28,7 +28,7 @@ cd ../../depthai-core
 
 echo "Configuring and building Thirdparty/depthai-core ..."
 
-cmake -S. -Bbuild
+cmake -S. -Bbuild -D'CMAKE_INSTALL_PREFIX=/ORB_SLAM3/Thirdparty/depthai-core/build'
 cmake --build build
 
 cd ../../
@@ -43,5 +43,5 @@ echo "Configuring and building ORB_SLAM3 ..."
 
 mkdir build
 cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release -Ddepthai_DIR=/ORB_SLAM3/Thirdparty/depthai-core/build
+cmake .. -DCMAKE_BUILD_TYPE=Release -D'depthai_DIR=/ORB_SLAM3/Thirdparty/depthai-core/build'
 make -j4
