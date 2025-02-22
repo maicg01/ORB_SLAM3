@@ -29,7 +29,7 @@ cd ../../depthai-core
 echo "Configuring and building Thirdparty/depthai-core ..."
 
 cmake -S. -Bbuild -D'CMAKE_INSTALL_PREFIX=/ORB_SLAM3/Thirdparty/depthai-core/build'
-cmake --build build
+cmake --build build --target install
 
 cd ../../
 
